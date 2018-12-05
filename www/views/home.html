@@ -1,0 +1,12 @@
+<ion-view view-title="Lista de Tarefas">
+    <ion-content>
+        <ion-toggle ng-model="mostrarTerminadas" ng-click="mostrar()" toggle-class="toggle-calm">Mostrar Terminadas</ion-toggle>
+        <button class="button button-block button-assertive" ng-click="removeTarefasTerminadas()">Remover Terminadas</button>
+        <ion-list>
+            <ion-checkbox ng-model="tarefa.terminada" ng-repeat="tarefa in tarefas | filter:filtroTarefas" class="{{(tarefa.terminada) ? 'cifrada' : ''}}">
+                {{tarefa.nome + ' - ' + tarefa.prazo}}
+            </ion-checkbox>
+        </ion-list>
+        <a class="button button-block button-positive" href="#/criar">Criar nova Tarefa</a>
+    </ion-content>
+</ion-view>

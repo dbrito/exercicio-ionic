@@ -1,0 +1,15 @@
+<ion-view view-title="Produtos">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Nome da Tarefa</span>
+                <input ng-model="tarefa.nome" type="text" placeholder="Nome da Tarefa">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Prazo (dd/mm/yyyy)</span>
+                <input ng-model="tarefa.prazo" type="text" placeholder="Prazo (dd/mm/yyyy)">
+            </label>
+        </div>
+        <button ng-click="criarTarefa()" class="button button-block button-positive">Criar Tarefa</button>
+    </ion-content>
+</ion-view>
